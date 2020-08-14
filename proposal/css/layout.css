@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* scrollbar */
+/* chrome */
+html .noscroll::-webkit-scrollbar {
+  width: 0;
+}
+
+html .noscroll::-webkit-scrollbar-thumb {
+  width: 0;
+}
+
+html .noscroll::-webkit-scrollbar-track {
+     width: 0;
+}
+
+/********** Font **********/
+
+/* @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,300,600'); */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/NotoSansKR-Light.woff2) format('woff2'),
+       url(../font/NotoSansKR-Light.woff) format('woff'),
+       url(../font/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+        url(../font/NotoSansKR-Regular.woff) format('woff'),
+        url(../font/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(../font/NotoSansKR-Medium.woff2) format('woff2'),
+        url(../font/NotoSansKR-Medium.woff) format('woff'),
+        url(../font/NotoSansKR-Medium.otf) format('opentype');
+ }
+
+
+
+
+/* reset */
+html, body {width:100%; height:100%; word-break:keep-all;}
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,hr,label{margin:0;padding:0;}
+body{line-height:1.5;background-color:#fff;font-size:14px;font-family:"Noto Sans KR", sans-serif; color:#555;font-weight:normal; font-weight:300;}
+fieldset,img{border:0;}
+img,input,select,button,option{font-family: "Noto Sans KR", sans-serif;vertical-align:middle !important; font-weight:300;}
+ol,ul{list-style:none;}
+em,address{font-style:normal;}
+a,a:active, a:hover, a:focus{text-decoration:none;}
+button{display:inline-block;overflow:hidden;border:0;background:none;cursor:pointer;}
+table{width:100%;border-spacing:0;}
+caption,legend{overflow:hidden;top:0;left:0;width:0;height:0;line-height:0;font-size:0;}
+textarea{resize:none;vertical-align:middle;}
+label{cursor:pointer;}
+strong{font-weight:600;}
+
+
+
+/* index */
+* { box-sizing:border-box; }
+body { background:#111; }
+#wrap{ width:100%; height:100%; position:relative;  box-sizing:border-box; min-width:320px; box-sizing:border-box; }
+#wrap .bg {width:100%; height:100%; background:#111;}
+#wrap .bg .move_btn { display:block; position:relative; margin:0 auto; width:750px; display:flex; justify-content:space-between; }
+#wrap .bg .move_btn ul {  }
+#wrap .bg .move_btn ul li {display:block; font-size:20px; color:#fff; font-weight:500; text-align:center; background:#1c6693; overflow:hidden; box-sizing:border-box; cursor:pointer; margin-top:20px; }
+#wrap .bg .move_btn ul li span { font-size:18px; font-weight:100; display:block; margin-top:8px;font-weight: 700;}
+#wrap .bg .move_btn ul li a { display:block; padding:30px 70px; letter-spacing:0; }
+#wrap .bg .move_btn ul li:hover {background:#db4612;}
+#wrap .bg .move_btn ul li:hover a { text-decoration:none; color:#fff; }
+#wrap .bg .move_btn ul li:last-child {}
+#wrap .bg h1 {font-size:75px; text-align:center; color:#fff; padding-top:180px; padding-bottom:20px; }
+
+
+.main-slide { position:relative; overflow:hidden; }
+.swiper-slide{padding-bottom: 35.41%;background-size: cover;width: 100%;position: relative;height: 0;}
+.swiper-slide .item{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+.swiper-pagination { }
+.swiper-pagination-bullet { width:12px !important; height:12px !important; background:none !important; border:2px solid #fff;  opacity:1 !important; }
+.swiper-pagination-bullet-active { background:#fff !important; }
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets { bottom:50px !important; }
+
+.mobile { margin:0 auto; text-align:center; }
+.mobile img { width:100%; }
+
+
+
+/* type A */
+section{text-align: center;}
+section.vod { background:#111; height:100vh; }
+
+.type_a section { height:100vh; }
+.type_a section img { width:100%; }
+
+.gnb_a { position:fixed; top:0; left:0; z-index:100; width:100%;height: auto !important; }
+.gnb_a .h_tit { position:absolute; left:60px; top:60px; width:355px; height:40px; }
+.gnb_a .h_tit img { width:auto; }
+.gnb_a .count { position:absolute; left:60px; bottom:50px; width:62px; height:10px; }
+.gnb_a .footer { position:absolute; right:200px; bottom:50px; width:385px; height:13px; }
+.gnb_a .page { display:block; width:2px; height:160px; background:rgba(255, 255, 255, 0.15); position: fixed; left:60px; top:calc(50% - 80px); }
+.gnb_a .page li { display:block; width:100%; height:40px; transition:all 0.5s; cursor:pointer; }
+.gnb_a .page li a { display:block; width:100%; height:100%; }
+.gnb_a .page .on { background:#dc4613; }
+.gnb_a .nav { display:block; width:100px; position:fixed; right:60px; bottom:50px; margin-top:35px; background:#181818; }
+.gnb_a .nav ul { display:block; width:100px; height:90vh; position:relative; }
+.gnb_a .nav ul .nav_item1 { position:absolute; left:0; top:60px; }
+.gnb_a .nav ul .nav_item2 { position:absolute; left:0; top:calc(50% - 9px); }
+.gnb_a .nav ul .nav_item3 { position:absolute; left:0; bottom:50px; }
+
+.a2 { background:url(../images/a/a2_bg.png) no-repeat 50%; background-size:cover; position:relative; }
+.a2 .con1 { position:absolute; top:0; left:0; z-index:1; }
+.a2 .con2 { position:absolute; top:0; left:0; }
+
+.a3 { background:url(../images/a/a3_bg.png) no-repeat 50%; background-size:cover; position:relative; }
+
+.a4 { background:url(../images/a/a4_bg.png) no-repeat 50%; background-size:cover; position:relative; }
+
+.inner { margin:0 auto; width:1230px;  }
+
+.gnb_b { width:100%; border-bottom:1px solid rgba(255, 255, 255, 0.1); background:#000; height:110px; }
+.gnb_b.fixed { position:fixed; top:0; left:0; z-index:100; }
+.gnb_b ul { display:flex; flex-wrap:wrap; justify-content:space-between; padding:0 2.604166666666667%; }
+
+.b2 img{width: 100%;}
+
+.type_c{background: #fff;}
+
+.gnb_c { width:100%; background:#fff; height:120px; }
+.gnb_c.fixed { position:fixed; top:0; left:0; z-index:100; }
+
+.c3 img,
+.c5 img{width: 100%;}

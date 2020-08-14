@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Discovery Proposal</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+<link type="text/css" rel="stylesheet" href="css/import.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/wow.min.js"></script>
+
+</head>
+
+<body class="noscroll">
+
+    <div id="wrap" class="type_a main_scroll">
+
+        <section class="gnb_a">
+            <div class="h_tit"><img src="images/a/gnb/hd_1.png" alt=""></div>
+            <div class="count"><img src="images/a/gnb/count1.png" alt=""></div>
+            <div class="footer"><img src="images/a/gnb/footer.png" alt=""></div>
+            <div class="nav">
+                <ul>
+                    <li class="nav_item1"><img src="images/a/gnb/gnb_item1.png" alt=""></li>
+                    <li class="nav_item2"><img src="images/a/gnb/gnb_item2.png" alt=""></li>
+                    <li class="nav_item3"><img src="images/a/gnb/gnb_item3.png" alt=""></li>
+                </ul>
+            </div>
+            <ul class="page">
+                <li class="page_1"></li>
+                <li class="page_2"></li>
+                <li class="page_3"></li>
+                <li class="page_4"></li>
+            </ul>
+        </section>
+
+        <section class="vod" id="cont1">
+            <iframe width="100%" height="100%" src="http://vodplayer.tving.com/embed/cjpromotion/watch?clipid=EA_308147&isfullvod=N&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section class="a2" id="cont2">
+            <div class="con1 wow fadeInUp"><img src="images/a/a2_1.png" alt=""></div>
+            <div class="con2 wow fadeInDown"><img src="images/a/a2_2.png" alt=""></div>
+        </section>
+
+        <section class="a3" id="cont3">
+        </section>
+
+        <section class="a4" id="cont4">
+        </section>
+
+
+    </div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function (){
+        var wd = $(window).scrollTop();
+        var con_top1 = $('#cont1').offset().top;
+        var con_top2 = $('#cont2').offset().top;
+        var con_top3 = $('#cont3').offset().top;
+        var con_top4 = $('#cont4').offset().top;
+
+        var scrollEvent = false;
+
+
+        //스크롤 이벤트
+        $("html").on('mousewheel',function(e){
+            e.preventDefault();
+            var wheel = e.originalEvent.wheelDelta;
+            if(wheel>0){
+                //스크롤 올릴때
+                console.log('up');
+                if (scrollEvent  == false && $(".page_2").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_1').addClass('on');
+                    $('.page_1').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count1.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_1.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top1},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                } else if (scrollEvent  == false && $(".page_3").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_2').addClass('on');
+                    $('.page_2').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count2.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top2},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                } else if (scrollEvent  == false && $(".page_4").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_3').addClass('on');
+                    $('.page_3').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count3.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top3},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                }
+            } else {
+                //스크롤 내릴때
+                console.log('down');
+                if (scrollEvent  == false && $(".page_1").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_2').addClass('on');
+                    $('.page_2').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count2.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top2},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                } else if (scrollEvent  == false && $(".page_2").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_3').addClass('on');
+                    $('.page_3').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count3.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top3},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                } else if (scrollEvent  == false && $(".page_3").is(".on") === true) {
+                    scrollEvent = true;
+                    $('.page_4').addClass('on');
+                    $('.page_4').siblings('li').removeClass('on');
+                    $('.count > img').attr('src', 'images/a/gnb/count4.png');
+                    $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+                    $('html, body').stop().animate(
+                        {scrollTop: con_top4},
+                        {duration:500, complete: function(){scrollEvent = false;}}
+                    );
+                }
+            }
+        });
+
+        // page위치
+        if (wd == '0') {
+            $('.page_1').addClass('on');
+            $('.page_1').siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count1.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_1.png');
+        } else if (wd >= con_top2 && wd < con_top3 ) {
+            $('.page_2').addClass('on');
+            $('.page_2').siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count2.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        } else if (wd >= con_top3 && wd < con_top4 ) {
+            $('.page_3').addClass('on');
+            $('.page_3').siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count3.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        } else if (wd == con_top4 ) {
+            $('.page_4').addClass('on');
+            $('.page_4').siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count4.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        }
+
+        // 버튼
+        $(".page_1").on("click", function(){
+            $('html, body').animate({scrollTop: '0'}, 500);
+            $(this).addClass('on');
+            $(this).siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count1.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_1.png');
+        });
+        $(".page_2").on("click", function(){
+            $('html, body').animate({scrollTop: con_top2}, 500);
+            $(this).addClass('on');
+            $(this).siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count2.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        });
+        $(".page_3").on("click", function(){
+            $('html, body').animate({scrollTop: con_top3}, 500);
+            $(this).addClass('on');
+            $(this).siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count3.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        });
+        $(".page_4").on("click", function(){
+            $('html, body').animate({scrollTop: con_top4}, 500);
+            $(this).addClass('on');
+            $(this).siblings('li').removeClass('on');
+            $('.count > img').attr('src', 'images/a/gnb/count4.png');
+            $('.h_tit > img').attr('src', 'images/a/gnb/hd_2.png');
+        });
+    })
+
+
+
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 500
+        }
+    );
+    wow.init();
+
+    </script>
+
+</body>
+</html>

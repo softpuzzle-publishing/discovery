@@ -1,0 +1,222 @@
+html,body{
+    width: 100%; height: 100%;
+}
+
+#skip_navi{position:fixed; left:0; top:-999px; display:block; padding:10px 20px; font-size:16px; color:#000; background:#f55454}
+#skip_navi:focus{top:0; z-index:999}
+
+#wrap{position: relative;min-height: 100%;}
+
+@include media-breakpoint-down(md) {
+    .header-group{
+        background: url('../images/bg-gnb-mobile.jpg') no-repeat 0 0;background-size: 100% 100%;position: fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 999;padding: 50px 60px;display: flex;flex-direction: column;justify-content: space-between;transform: translate(100%);overflow-x: hidden;transition: all .25s .03s ease-in-out;
+    }
+    .mobile-menu{
+        position: absolute;right: 0;top: 23px;z-index: 1000;
+        a{display: block;}
+    }
+    .btn-hamburger {
+        content: "";display: inline-block;vertical-align: top;position: relative;opacity: 1;height: 2px;width: 33px;background-color: $black;transition: transform 400ms ease;
+        &:before, &:after {
+          content: "";display: block;position: absolute;opacity: 1;height: 2px;width: 33px;background-color: $black;
+        }
+        &:before {
+          top: 7px;transition: opacity 400ms ease;
+        }
+        &:after {
+          top: 14px;transition: transform 400ms ease;
+        }
+    }
+    html.open-mobile-menu{
+        body{overflow: hidden;}
+        .header-group{transform: translate(0);}
+        .mobile-menu{top: 50px;right: -13px;}
+        .btn-hamburger {
+            transform: rotate(45deg) translateY(13px);background-color: $white;
+            &:before, &:after {
+                background-color: $white;
+            }
+            &:before {
+              opacity: 0;
+            }
+            &:after {
+              transform: rotate(-450deg) translateX(14px);
+            }
+        }
+    }
+}
+
+.social{
+    position: absolute;right: 0;top: 45px;
+    .btn-sns{
+        display: flex;align-items: center;
+        span{color: $dark;font-weight: 700;margin-right: 10px;}
+        i{
+            display: inline-block;width: 30px;height: 30px;background: $dark;position: relative;
+            &::before{content: '';display: block;width: 12px;height: 6px;background: url(../images/arr-down-white.svg) no-repeat 50% 50%;position: absolute;left:50%;top: 50%;margin: -3px 0 0 -6px;transition: all .2s .05s ease-out;}
+        }
+    }
+    .list{
+        position: absolute;right: 0;top: 30px;z-index: 10;opacity: 0;visibility:hidden;padding-top: 10px;width: 100%;
+        ul{
+            background: $dark;box-shadow: 0 15px 20px rgba(0,0,0,0.4);padding: 30px 0;text-align: center;
+            li + li{margin-top: 32px;}
+            a{display: block;width: 24px;background-position: 50% 50%;background-repeat: no-repeat;background-size: contain;margin: 0 auto;}
+            .facebook a{background-image: url(../images/sns-facebook.png);height: 20px;}
+            .youtube a{background-image: url(../images/sns-youtube.png);height: 17px;}
+            .instagram a{background-image: url(../images/sns-instagram.png);height: 22px;}
+        }
+    }
+    &.active{
+        .btn-sns i::before{transform: rotate(180deg);}
+        .list{visibility: visible;opacity: 1;}
+    }
+}
+@include media-breakpoint-down(md) {
+    .social{
+        position: static;margin-left: -5px;
+        .btn-sns{display: none;}
+        .list{
+            position: static;opacity: 1;visibility: visible;padding-top: 0;
+            ul{
+                display: flex;align-items: center; box-shadow: none;background: transparent;padding: 0;
+                li + li{margin-left: 28px;margin-top: 0;}
+                .facebook a{background-image: url(../images/sns-facebook-m.png);height: 17.5px;}
+                .youtube a{background-image: url(../images/sns-youtube-m.png);height: 14.5px;}
+                .instagram a{background-image: url(../images/sns-instagram-m.png);height: 18.5px;}
+            }
+        }
+    }
+}
+
+.gnb{
+    position: absolute;left: 243px;top: 48px;
+    ul{display: flex;}
+    li + li{margin-left: 45px;}
+    a{
+        display: block;font-weight: 700;color: $dark;font-size: 17px;opacity: .4;
+        span{position: relative;padding: 10px 0;}
+        span::before{content: '';width: 0;height: 5px;position: absolute;bottom:0;left: 0;transition: .2s .03s ease-in-out;}
+        &:hover span::before{width: 40px;background: $navy;}
+    }
+    li.active span::before{background: $navy;width: 40px;}
+    li:first-child a{opacity: 1;}
+}
+@include media-breakpoint-down(md) {
+    .gnb{
+        position: static;padding: 30px 0;
+        ul{display: block;}
+        li + li{margin-left: 0;margin-top: 25px;}
+        a{
+            font-size: 24px;color: #fff;
+            span{padding: 8px 0;}
+            span::before{height: 3px;}
+            &:hover span::before{width: 0;}
+        }
+        li.active span::before{background: #fff;}
+    }
+}
+
+body{padding-top: 110px;}
+#header-block{}
+#header{
+    min-height: 110px;position: fixed;left: 0;top: 0;width:100%;z-index: 10;background: #fff;transition: all .2s .03s ease-in-out;
+    .header-wrap{position: relative;}
+    .logo{
+        position: absolute;left: 0;top: 43px;
+        a{display: block;background: url(../images/logo.svg) no-repeat 50% 50%;width: 163px;height: 33px;background-size: contain;}
+    }    
+}
+html.is-scrolled{
+    #header {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+}
+@include media-breakpoint-down(md) {
+    #header{
+        min-height: 60px;
+        .logo{
+            top: 20px;
+            a{width: 106px;height: 22px;}
+        }
+    }
+
+}
+
+#container-block{
+    padding-bottom: 350px;
+}
+
+@include media-breakpoint-down(md) {
+    #container-block{
+        padding-bottom: 230px;
+    }
+    .container{padding-left: 30px;padding-right: 30px;}
+}
+
+#footer{
+    background: $dark;position: absolute;bottom: 0;width: 100%;padding: 49px 0;
+    .container{height: 100%;display: flex;flex-direction: column;justify-content: center;}
+    strong{display: block;color: #999;font-size: 18px;font-weight: 700;display: block;margin-bottom: 3px;}
+    address{font-size: 16px;margin-bottom: 3px;}
+    .copyright{font-weight: 500;font-size: 12px;color: #666;}
+    .footer-menu{
+        margin-bottom: 30px;
+        ul{display: flex;align-items: center;}
+        li + li::before{content: 'I';color: #999;margin: 0 10px;}
+        a{color: #fff;font-size: 18px;}
+    }
+    .social{
+        position: static;
+        .list{
+            position: static;visibility: visible;opacity: 1;padding: 0;
+            ul{
+                padding: 20px 0;background: transparent;box-shadow: none;
+                display: flex;align-items: center;
+                li + li{margin-top: 0;margin-left: 30px;}
+            }
+
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    #footer{
+        padding: 30px 0;
+        strong{font-size: 14px;color: #fff;margin-bottom: 6px;}
+        address{font-size: 13px;}
+        .copyright{font-size: 10px;margin-top: 8px;}
+    }
+    .footer-menu{display: none;}
+    .header-menu{
+        ul{
+            li + li{margin-top: 10px;}
+            a{font-size: 15px;color: #aaa;}
+        }
+    }
+}
+
+.dropdown-custom{
+    position: relative;border-bottom: 3px solid #fff;
+    .selected{
+        display: inline-block;color: #fff;font-weight: 700;line-height: 40px;min-width: 200px;
+        &::before{content: '';display: block;width: 12px;height: 6px;background: url(../images/arr-down-white.svg) no-repeat 50% 50%;position: absolute;right:0;top: 50%;margin: -3px 0 0 0;transition: all .2s .05s ease-out;transform: rotate(180deg);}
+    }
+    ul{
+        width: 100%;position: absolute;left: 0;bottom: 42px;max-height: 160px;overflow-x: hidden;background: rgba(255,255,255,0.4);;padding: 15px;border-radius: 5px;transform: translateY(10px);opacity: 0;visibility:hidden;transition: all .25s ease-in-out;
+        li{
+            a{color: #fff;}
+            & + li{margin-top: 5px;}
+        }
+    }
+    &.active ul{transform: translateY(0);opacity: 1;visibility:visible;}
+}
+@include media-breakpoint-down(md) {
+    .dropdown-custom{
+        ul{
+            background: rgba(255,255,255,0.85);
+            li{
+                a{color: #000;font-weight: 500;}
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* noto sans */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-weight: 100;
+	src: url(../fonts/NotoSansCJKkr-Thin.eot);
+	src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.woff) format('woff'),
+		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.ttf) format('truetype');
+}
+@font-face {
+      font-family: 'Noto Sans KR';
+      font-weight: 300;
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot);
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.woff) format('woff'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.ttf) format('truetype');
+}
+@font-face {
+      font-family: 'Noto Sans KR';
+      font-weight: 400;
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.eot);
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.woff) format('woff'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.ttf) format('truetype');
+}
+@font-face {
+      font-family: 'Noto Sans KR';
+      font-weight: 500;
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.eot);
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.woff) format('woff'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.ttf) format('truetype');
+}
+@font-face {
+      font-family: 'Noto Sans KR';
+      font-weight: 700;
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.eot);
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.woff) format('woff'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-weight: 900;
+	src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.eot);
+	src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.woff) format('woff'),
+		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.ttf) format('truetype');
+}
+
+/* SharpSans  */
+@font-face {
+	font-family: 'SharpSans';
+	font-weight: 400;
+	src: url(../fonts/SharpSans/SharpSans-Book.eot);
+	src: url(../fonts/SharpSans/SharpSans-Book.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/SharpSans/SharpSans-Book.woff) format('woff'),
+		  url(../fonts/SharpSans/SharpSans-Book.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'SharpSans';
+	font-weight: 500;
+	src: url(../fonts/SharpSans/SharpSans-Medium.eot);
+	src: url(../fonts/SharpSans/SharpSans-Medium.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/SharpSans/SharpSans-Medium.woff) format('woff'),
+		  url(../fonts/SharpSans/SharpSans-Medium.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'SharpSans';
+	font-weight: 700;
+	src: url(../fonts/SharpSans/SharpSans-Bold.eot);
+	src: url(../fonts/SharpSans/SharpSans-Bold.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/SharpSans/SharpSans-Bold.woff) format('woff'),
+		  url(../fonts/SharpSans/SharpSans-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'SharpSans';
+	font-weight: 900;
+	src: url(../fonts/SharpSans/SharpSans-ExtraBold.eot);
+	src: url(../fonts/SharpSans/SharpSans-ExtraBold.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/SharpSans/SharpSans-ExtraBold.woff) format('woff'),
+		  url(../fonts/SharpSans/SharpSans-ExtraBold.ttf) format('truetype');
+}
+
+
+/* login */
+body{margin: 0;font-family: "SharpSans", "Noto Sans KR";font-weight: 400;color: #000;}
+html,body,#wrap{height: 100%;}
+.login {width: 100%;height: 100%;background: url('../images/bg-login.jpg') 100% 50% no-repeat;background-size: cover;position: relative;}
+.login .login-content{position: relative;z-index: 1;display: flex;justify-content: center;flex-direction: column;height: 100%;padding-left: 165px;}
+.login h1{margin: 0 0 100px;}
+.login h1 img{width: 165px;}
+.login .txt{font-size: 90px;font-weight: 700;line-height: 100px;color: #fff;margin: 0 0 100px;}
+.login .loginInputArea {display: flex;margin-bottom: 70px;}
+.login .loginInputArea > div{margin-right: 40px;}
+.login .loginInputArea input::-webkit-input-placeholder {color: #fff;}
+.login .loginInputArea input:-ms-input-placeholder {color: #fff;}
+.login .loginInputArea input::placeholder {color: #fff;}
+.login .loginInputArea input:focus{outline:0;}
+.login .loginInputArea input[type=text],
+.login .loginInputArea input[type=password] {padding: 0; border: 0; border-bottom: 1px solid #fff; border-image: none; width: 310px; height: 50px; line-height: 50px; letter-spacing: 0.03em; font-size: 18px;background: transparent;color: #fff;border-radius: 0;}
+.login .button {background: #000;border: 0;padding: 16px 80px;color: #fff;font-size: 18px;font-weight: 700;border-radius: 0 0 .5em 0;display: inline-block;}
+.login .copyright {text-align: center; color: rgb(153, 153, 153); font-size: 12px; margin-top: 30px;}
+.login .save{color: #fff;margin-top: 25px;}
+.login .save .custom-control-label{font-size: 14px;}
+.login .save .custom-control-label::before{border: 1px solid #fff;background-color: transparent;border-radius: 0;top: .05rem;}
+.login .save .custom-control-label::after{top: .05rem;}
+.login .find{margin-top: 100px;}
+.login .find a{color: #fff;font-size: 14px;text-decoration: underline;letter-spacing: 0;}
+.login fieldset{border: 0;padding: 0;margin: 0;}
