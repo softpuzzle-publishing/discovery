@@ -1,12 +1,15 @@
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;}
 .icon-close-white{background-image: url('../images/x-white.svg');width: 35px;height: 34px;}
-.icon-down-white{background-image: url('../images/icon-down-white.png');width: 12px;height: 7px;}
-.icon-new{font-size: 15px;width: 25px;height: 25px;background: #fe561c;color: #fff;text-align: center;line-height: 25px;font-weight: 700;}
+.icon-down-white{background-image: url('../images/chevron-down-solid.svg');width: 15px;height: 15px;}
+.icon-new{font-size: 15px;width: 25px;height: 25px;padding-right: 1px;background: #fe561c;color: #fff;text-align: center;line-height: 25px;font-weight: 700;}
 .icon-refrash{background-image: url('../images/icon-refrash.png');width: 22px;height: 22px;}
 .icon-search{background-image: url('../images/icon-search.png');width: 22px;height: 22px;vertical-align: middle;}
+.icon-file{background-image: url('../images/icon-file.png');width: 18px;height: 20px;vertical-align: middle;}
 @include media-breakpoint-down(md) {
+    .icon-new{width: 22px;height: 22px;font-size: 13px;line-height: 23px;}
     .icon-refrash{width: 18px;height: 18px;}
     .icon-search{background-image: url('../images/icon-search-mobile.png');width: 19px;height: 19px;}
+    .icon-file{width: 14.5px;height: 15px;}
 }
 
 .visual{
@@ -46,6 +49,14 @@
         }
         .swiper-pagination{bottom: 18px;}
         .swiper-pagination-bullet{width: 8px;height: 8px;}
+        .swiper-button-wrap{display: none;}
+        &.visual-program{
+            .swiper-slide{
+                height: auto;
+                img{width: 100%;}
+            }
+
+        }
     }
 }
 
@@ -58,6 +69,13 @@
     &.sub-visual-program{background-image: url('../images/visual-program.jpg');margin-bottom: 0;}
     &.sub-visual-channel{background-image: url('../images/visual-channel.jpg');}
     &.sub-visual-qna{background-image: url('../images/visual-qna.jpg');}
+    &.sub-visual-notice{background-image: url('../images/visual-notice.jpg');}
+    &.sub-visual-cuetone{background-image: url('../images/visual-cuetone.jpg');}
+    &.sub-visual-none{
+        margin-bottom: 0;
+        .container{height: 235px;}
+        .title{color: #111;}
+    }
 }
 
 @include media-breakpoint-down(md) {
@@ -66,6 +84,9 @@
         .container{height: 200px;}
         .desc{font-size: 15px;}
         .title{font-size: 30px;}
+        &.sub-visual-none{
+            .container{height: 105px;}
+        }
     }
 }
 

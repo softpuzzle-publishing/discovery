@@ -68,7 +68,7 @@ var Common = {
 	dropdown : function(){
 		$('.dropdown-custom .selected').on('click',function(e){
 			e.preventDefault();
-			$(this).closest('.dropdown-custom').toggleClass('active');			
+			$(this).closest('.dropdown-custom').toggleClass('active');
 		});
 		$(document).click(function(e) {
 			if(!$('.dropdown-custom').has(e.target).length){

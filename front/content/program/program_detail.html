@@ -45,16 +45,16 @@
                                     <li><a href="../discovery/discovery.html"><span>디스커버리 채널 코리아</span></a></li>
                                     <li class="active"><a href="../program/program.html"><span>프로그램 소개</span></a></li>
                                     <li><a href="../channel/channel.html"><span>채널번호</span></a></li>
-                                    <li><a href=""><span>편성표</span></a></li>
+                                    <li><a href="" target="_blank" title="새 창"><span>편성표</span><i class="icon-new-window"></i></a></li>
                                     <li><a href="../qna/qna.html"><span>1:1 문의</span></a></li>
                                 </ul>
                             </div>
                             <div class="header-menu d-lg-none">
                                 <ul>
-                                    <li><a href="">공지사항</a></li>
-                                    <li><a href="">큐톤표</a></li>
-                                    <li><a href="">이메일 무단 수집 거부</a></li>
-                                    <li><a href="">법적고지</a></li>
+                                    <li><a href="../util/notice_list.html">공지사항</a></li>
+                                    <li><a href="../util/cuetone.html">큐톤표</a></li>
+                                    <li><a href="../util/email.html">이메일 무단 수집 거부</a></li>
+                                    <li><a href="../util/legal.html">법적고지</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -67,12 +67,23 @@
         </div>
         <div id="container-block">
             <div id="container">
-                <div class="visual">
+                <div class="visual visual-program">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide d-none d-md-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
-                            <div class="swiper-slide d-none d-md-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
-                            <div class="swiper-slide d-none d-md-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
+                            <!-- po용 -->
+                            <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
+                            <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
+                            <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
+                            <!-- mobile용 -->
+                            <div class="swiper-slide d-lg-none">
+                                <img src="../../resources/images/img-program-visual-m.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide d-lg-none">
+                                <img src="../../resources/images/img-program-visual-m.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide d-lg-none">
+                                <img src="../../resources/images/img-program-visual-m.jpg" alt="">
+                            </div>
                         </div>
                         <div class="container swiper-button-wrap">
                             <div class="swiper-button-group">
@@ -84,49 +95,81 @@
                     </div>
                 </div>
                 <div id="content">
-                    <i class="fas fa-share-alt"></i>
                     <div class="program-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="poster"><img src="../../resources/images/@thumb-program2.png" alt="코리안몬스터"></div>
-                            </div>
-                            <div class="col-9">
-                                <div class="txt">
-                                    <div class="txt1">Insight 특별기획다큐</div>
-                                    <h3 class="subject">코리안몬스터</h3>
-                                    <div class="date"><span>매주(일) 밤 10:30 방송</span> <span>6월20일(토) 밤 12시 시즌6 첫방송</span></div>
-                                    <div class="synopsis">노바스코샤주 연안에는 수수께끼에 둘러싸인 섬이 하나 있다. 저주받았다고 알려진 오크 섬에는
-                                        “보물을 찾기 전에 7명이 죽을 것이다”라는 예언이 전해져 내려온다. 여태까지 총 6명이 죽었다는 사실을 알고있는 라기나 형제는 이 섬을 찾아간다. 오크 섬에는 과연 어떤 비밀이 숨어 있는 걸까?
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 d-none d-lg-block">
+                                    <div class="poster"><img src="../../resources/images/@thumb-program2.png" alt="코리안몬스터"></div>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="txt">
+                                        <div class="txt1">INSIGHT 특별기획다큐</div>
+                                        <h3 class="subject">코리안몬스터</h3>
+                                        <div class="date">
+                                            <span>매주(일) 밤 10:30 방송</span> <span>6월20일(토) 밤 12시 시즌6 첫방송</span>
+                                        </div>
+                                        <div class="synopsis">노바스코샤주 연안에는 수수께끼에 둘러싸인 섬이 하나 있다. 저주받았다고 알려진 오크 섬에는
+                                            “보물을 찾기 전에 7명이 죽을 것이다”라는 예언이 전해져 내려온다. 여태까지 총 6명이 죽었다는 사실을 알고있는 라기나 형제는 이 섬을 찾아간다. 오크 섬에는 과연 어떤 비밀이 숨어 있는 걸까?
+                                        </div>
+                                    </div>
+                                    <div class="btn-area row">
+                                        <div class="col-12 col-lg-auto">
+                                            <a href="" class="btn btn-block btn-danger">방송보기</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="btn-area row row-5">
-                                    <div class="col-6 col-md-auto">
-                                        <a href="" class="btn btn-block btn-danger">방송보기</a>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <h4>Program Info.</h4>
                                     </div>
-                                    <div class="col-6 col-md-auto">
-                                        <a href="" class="btn btn-block btn-dark">구독하기</a>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row">
+                                            <div class="col-12 col-lg">
+                                                <dl>
+                                                    <dt>편성</dt>
+                                                    <dd>매주 (일) 밤 10:30 방송</dd>
+                                                    <dt>장르</dt>
+                                                    <dd>서바이벌</dd>
+                                                    <dt>관련등급</dt>
+                                                    <dd>15세 관람가</dd>
+                                                </dl>
+                                            </div>
+                                            <div class="col-12 col-lg">
+                                                <dl>
+                                                    <dt>연출</dt>
+                                                    <dd>방글이, 구민정, 권재오, 박지은 외</dd>
+                                                    <dt>작가</dt>
+                                                    <dd>노진영, 이지혜, 이고운, 박은주 외</dd>
+                                                    <dt>출연</dt>
+                                                    <dd>연정훈, 김종민, 문세윤, 김선호, 딘딘, 라비</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="share">
+                                <a href="javascript:;" class="btn-share"><span class="sr-only">공유</span> <i class="icon-share"></i></a>
+                                <div class="list">
+                                    <ul>
+                                        <li class="facebook"><a href="" target="_blank"><span class="sr-only">facebook</span></a></li>
+                                        <li class="kakaotalk"><a href="" target="_blank"><span class="sr-only">kakaotalk</span></a></li>
+                                        <li class="link"><a href="" target="_blank"><span class="sr-only">link copy</span></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="info">
-                            <div class="row">
-                                <div class="col-3">
-                                    <h4>Program Info.</h4>
-                                </div>
-                                <div class="col-9">
-                                    <div class="row">
-                                        <div class="col">
-                                            <dl>
-                                                <dt>편성</dt>
-                                                <dd>매주 (일) 밤 10:30 방송</dd>
-                                                <dt>장르</dt>
-                                                <dd>서바이벌</dd>
-                                                <dt>관련등급</dt>
-                                                <dd>15세 관람가</dd>
-                                            </dl>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="program-video">
+                        <div class="container">
+                            <div class="video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CUdkB3T2Ang" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="btn-area row justify-content-center">
+                                <div class="col-12 col-md-auto">
+                                    <a href="program.html" class="btn btn-block btn-dark">목록</a>
                                 </div>
                             </div>
                         </div>
@@ -139,10 +182,10 @@
                 <div class="container">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="">이메일 무단 수집 거부</a></li>
-                            <li><a href="">법적고지</a></li>
-                            <li><a href="">공지사항</a></li>
-                            <li><a href="">큐톤표</a></li>
+                            <li><a href="../util/email.html">이메일 무단 수집 거부</a></li>
+                            <li><a href="../util/legal.html">법적고지</a></li>
+                            <li><a href="../util/notice_list.html">공지사항</a></li>
+                            <li><a href="../util/cuetone.html">큐톤표</a></li>
                         </ul>
                     </div>
                     <div class="row justify-content-between align-items-end">
@@ -179,6 +222,20 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        });
+
+        $(document).ready(function(){
+            $('.program-detail .share').on('mouseenter',function(){
+                $(this).addClass('active');
+            }).on('mouseleave',function(){
+                $(this).removeClass('active');
+            });
+            $('.btn-share').on('focusin',function(){
+			    $(this).closest('.share').addClass('active');
+            });
+            $('.share .list li:last-child a').on('focusout',function(){
+                $(this).closest('.share').removeClass('active');
+            });
         });
     </script>
 </body>

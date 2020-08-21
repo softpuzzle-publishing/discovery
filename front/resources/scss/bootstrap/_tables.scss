@@ -4,7 +4,7 @@
 
 .table {
   width: 100%;
-  margin-bottom: $spacer;
+  //margin-bottom: $spacer;
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
@@ -17,14 +17,36 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 26px 0;
+    //border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
+
+  tbody td{
+    border-bottom: 2px solid #181818;
+    font-size: 18px;
+    padding: 26px 60px 25px;
+  }
+
+  .text-left{padding-left: 60px;}
+
+  [class^=icon-]{margin-left: 8px;}
 }
 
+@include media-breakpoint-down(xxl) {
+  .table{
+    tbody td{
+      padding-left: 30px;padding-right: 30px;
+    }
+    .text-left{padding-left: 30px;}
+  }
+}
 
 //
 // Condensed table w/ half padding
@@ -181,5 +203,21 @@
         }
       }
     }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .table-transform,
+  .table-transform thead,
+  .table-transform tbody,
+  .table-transform tr,
+  .table-transform th,
+  .table-transform td{display: block;}
+  .table-transform{
+    border-top: 2px solid $dark;
+    thead{display: none;}
+    tbody tr{border-bottom: 2px solid $dark;padding: 20px 0;}
+    tbody td{border: 0;text-align: left !important;padding: 0;font-size: 13px;}
+    .text-left{padding: 0;}
   }
 }
