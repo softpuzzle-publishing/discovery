@@ -85,6 +85,11 @@ var Common = {
 		$('.long .close').on('click',function(e){
 			$(this).closest('.long').hide();
 		});
+
+		//모바일 카테고리
+		$(document).on('change','.select-mobile select',function(e){
+			$(this).next('.select-value').text($(this).val());
+		});
 	}
 };
 

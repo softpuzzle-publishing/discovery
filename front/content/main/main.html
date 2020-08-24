@@ -73,32 +73,45 @@
         <div id="main-block">
             <div id="main">
                 <div class="section visual">
-                    <div class="swiper-container">
+                    <!-- pc용 -->
+                    <div class="swiper-container d-none d-md-block" id="visual-pc">
                         <div class="swiper-wrapper">
-                            <!-- pc용 -->
-                            <div class="swiper-slide d-none d-md-block" style="background-image: url(../../resources/images/main-banner2.jpg);">
+                            <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner2.jpg);">
                                 <a href="../program/program_detail.html">
                                     <div class="container">
                                         <span>솔직하지만 품격있는 대화</span><strong>우아한 친구들</strong><p>매주 금요일밤 10시 30분</p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide d-none d-md-block" style="background-image: url(../../resources/images/main-banner1.jpg);">
-                                <a href="../program/program_detail.html"><span class="sr-only">건반 위의 하이에나</span></a>
-                            </div>
-                            <!-- mobile용 -->
-                            <div class="swiper-slide d-md-none" style="background-image: url(../../resources/images/main-banner2-mobile.jpg);">
-                                <a href="../program/program_detail.html">
-                                    <div class="container">
-                                        <span>솔직하지만 품격있는 대화</span><strong>우아한 친구들</strong><p>매주 금요일밤 10시 30분</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide d-md-none" style="background-image: url(../../resources/images/main-banner1-mobile.jpg);">
+                            <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner1.jpg);">
                                 <a href="../program/program_detail.html"><span class="sr-only">건반 위의 하이에나</span></a>
                             </div>
                             <div class="swiper-slide">
-                                <iframe width="100%" height="100%" src="http://vodplayer.tving.com/embed/cjpromotion/watch?clipid=EA_308147&isfullvod=N&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-frame">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CUdkB3T2Ang?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- mobile용 -->
+                    <div class="swiper-container d-md-none" id="visual-mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner2-mobile.jpg);">
+                                <a href="../program/program_detail.html">
+                                    <div class="container">
+                                        <span>솔직하지만 품격있는 대화</span><strong>우아한 친구들</strong><p>매주 금요일밤 10시 30분</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner1-mobile.jpg);">
+                                <a href="../program/program_detail.html"><span class="sr-only">건반 위의 하이에나</span></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="video-frame">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CUdkB3T2Ang?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
@@ -343,7 +356,7 @@
     </div>
 
     <script>
-        var swiperMain = new Swiper('.visual .swiper-container', {
+        var swiperMain = new Swiper('#visual-pc', {
             effect: 'fade',
             // autoplay: 100,
             spped: 5000,
@@ -352,6 +365,16 @@
                 clickable: true,
             },
         });
+        var swiperMain = new Swiper('#visual-mobile', {
+            effect: 'fade',
+            // autoplay: 100,
+            spped: 5000,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
 
         const breakpoint = window.matchMedia( '(min-width:992px)' );
         let swiperProgram;

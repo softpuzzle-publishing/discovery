@@ -60,14 +60,15 @@
 .category-list{
     margin-bottom: 45px;
     a{
-        color: #999;font-size: 20px;font-weight: 700;letter-spacing: -0.025em;line-height: 1;
+        color: #999;font-size: 19px;font-weight: 700;letter-spacing: -0.025em;line-height: 1;
         &.active{color: $red;}
-        & + a{margin-left: 40px;}
+        & + a{margin-left: 38px;}
     }
 }
 @include media-breakpoint-down(xxl) {
     .category-list{
         a{
+            font-size: 18px;
             & + a{margin-left: 20px;}
         }
     }
@@ -159,9 +160,14 @@
 
 .program-search{
     .form-control-wrap{
-        display: inline-block;vertical-align: top;position: relative;width: 330px;height:50px;
+        display: inline-block;vertical-align: top;position: relative;width: 300px;height:50px;
         .form-control{height:100%;border-color: #000;}
         .icon-search{position: absolute;right:20px;top: 50%;margin-top: -11px;}
+    }
+}
+@include media-breakpoint-down(xl) {
+    .program-search{
+        .form-control-wrap{width: 260px;}
     }
 }
 @include media-breakpoint-down(md) {
@@ -495,6 +501,12 @@
 @include media-breakpoint-down(md) {
     .program-detail{
         padding: 45px 0;
+        .container{
+            > .row{
+                margin-left:0;margin-right: 0;
+                > [class^=col]{padding-left: 0;padding-right: 0;}
+            }
+        }
         .txt{
             padding: 0;
             .txt1{font-size: 14px;}
@@ -509,6 +521,10 @@
         }
         .info{
             border-top: 0;padding-top: 0;margin-top: 35px;
+            > .row{
+                margin-left:0;margin-right: 0;
+                > [class^=col]{padding-left: 0;padding-right: 0;}
+            }
             h4{border-bottom: 3px solid $dark;font-size: 20px;padding-bottom:8px;margin-bottom: 15px;}
             dl{
                 font-size: 13px;
