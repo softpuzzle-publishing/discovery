@@ -356,23 +356,52 @@
     </div>
 
     <script>
-        var swiperMain = new Swiper('#visual-pc', {
+        var swiperMainPc = new Swiper('#visual-pc', {
             effect: 'fade',
             // autoplay: 100,
             spped: 5000,
+            autoplay: {
+                delay: 5000,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
         });
-        var swiperMain = new Swiper('#visual-mobile', {
+        var swiperMainMobile = new Swiper('#visual-mobile', {
             effect: 'fade',
             // autoplay: 100,
             spped: 5000,
+            autoplay: {
+                delay: 5000,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+        });
+        $('<a href="#none" class="sl-pause"><i class="icon-pause"></i></a>').appendTo('.visual .swiper-pagination');
+        $(document).on('click','#visual-pc .swiper-pagination a',function(){
+            if($(this).attr('class') == 'sl-pause'){
+                $(this).find('i').attr('class',$(this).find('i').attr('class').replace('pause','play'));
+                $(this).attr('class','sl-play');
+                swiperMainPc.autoplay.stop();
+            }else{
+                $(this).find('i').attr('class',$(this).find('i').attr('class').replace('play','pause'));
+                $(this).attr('class','sl-pause');
+                swiperMainPc.autoplay.start();
+            }
+        });
+        $(document).on('click','#visual-mobile .swiper-pagination a',function(){
+            if($(this).attr('class') == 'sl-pause'){
+                $(this).find('i').attr('class',$(this).find('i').attr('class').replace('pause','play'));
+                $(this).attr('class','sl-play');
+                swiperMainMobile.autoplay.stop();
+            }else{
+                $(this).find('i').attr('class',$(this).find('i').attr('class').replace('play','pause'));
+                $(this).attr('class','sl-pause');
+                swiperMainMobile.autoplay.start();
+            }
         });
 
 

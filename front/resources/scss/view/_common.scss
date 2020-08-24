@@ -5,11 +5,15 @@
 .icon-refrash{background-image: url('../images/icon-refrash.png');width: 22px;height: 22px;}
 .icon-search{background-image: url('../images/icon-search.png');width: 22px;height: 22px;vertical-align: middle;}
 .icon-file{background-image: url('../images/icon-file.png');width: 18px;height: 20px;vertical-align: middle;}
+.icon-play{background-image: url('../images/icon-play.svg');width: 18px;height: 16px;vertical-align: middle;background-position: 50% 50%;}
+.icon-pause{background-image: url('../images/icon-pause.svg');width: 18px;height: 16px;vertical-align: middle;background-position: 50% 50%;}
 @include media-breakpoint-down(md) {
     .icon-new{width: 22px;height: 22px;font-size: 13px;line-height: 23px;}
     .icon-refrash{width: 18px;height: 18px;}
     .icon-search{background-image: url('../images/icon-search-mobile.png');width: 19px;height: 19px;}
     .icon-file{width: 14.5px;height: 15px;}
+    .icon-play{bwidth: 18px;height: 12px;}
+    .icon-pause{width: 18px;height: 12px;}
 }
 
 .visual{
@@ -38,6 +42,8 @@
     .swiper-button-prev:after{font-size: 20px;position: static;}
     .swiper-button-next.swiper-button-disabled,
     .swiper-button-prev.swiper-button-disabled{color: #bbb;opacity: 1;}
+    .sl-pause{vertical-align: middle;display: inline-block;margin-left: 7px;transform: translateY(-2px);}
+    .sl-play{vertical-align: middle;display: inline-block;margin-left: 7px;transform: translateY(-2px);}
 }
 @include media-breakpoint-down(md) {
     .visual{
@@ -53,6 +59,8 @@
         .swiper-pagination{bottom: 18px;}
         .swiper-pagination-bullet{width: 8px;height: 8px;}
         .swiper-button-wrap{display: none;}
+        .sl-pause{transform: translateY(0);}
+        .sl-play{transform: translateY(0);}
         &.visual-program{
             .swiper-slide{
                 height: auto;
@@ -64,7 +72,7 @@
 }
 
 #sub-visual{
-    background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;text-align: center;color: #fff;margin-bottom: 100px;
+    background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;text-align: center;color: #fff;margin-bottom: 100px;background-image: url('../images/visual-discovery.jpg') !important;
     .container{display: flex;flex-direction: column;align-items: center;justify-content: center;height: 600px;}
     .desc{font-size: 24px;}
     .title{font-size: 60px;font-weight: 700;}
