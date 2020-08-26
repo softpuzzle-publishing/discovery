@@ -44,7 +44,7 @@
                                     <li><a href="../discovery/discovery.html"><span>디스커버리 채널 코리아</span></a></li>
                                     <li class="active"><a href="../program/program.html"><span>프로그램 소개</span></a></li>
                                     <li><a href="../channel/channel.html"><span>채널번호</span></a></li>
-                                    <li><a href="" target="_blank" title="새 창"><span>편성표</span><i class="icon-new-window"></i></a></li>
+                                    <li><a href="" target="_blank" title="네이버 편성표"><span>편성표</span><i class="icon-new-window"></i></a></li>
                                     <li><a href="../qna/qna.html"><span>1:1 문의</span></a></li>
                                 </ul>
                             </div>
@@ -74,14 +74,26 @@
                 <div id="content" class="has-bottom-padding">
                     <div class="tab">
                         <div class="container">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">방영 프로그램</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">종영 프로그램</a>
-                                </li>
-                            </ul>
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col col-lg-auto">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">방영 프로그램</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">종영 프로그램</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    <div class="program-search">
+                                        <span class="form-control-wrap">
+                                            <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                                            <button type="submit" class="icon-search"><span class="sr-only">검색</span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-content">
@@ -119,25 +131,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <div class="d-none d-lg-block">
-                                            <div class="program-search">
-                                                <span class="form-control-wrap">
-                                                    <input type="text" class="form-control">
-                                                    <button type="submit" class="icon-search"><span class="sr-only">검색</span></button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="d-lg-none">
-                                            <button type="submit" class="icon-search" data-toggle="modal" data-target="#modal-search"><span class="sr-only">검색</span></button>
-                                        </div>
+                                    <div class="col-auto d-lg-none">
+                                        <button type="submit" class="icon-search" data-toggle="modal" data-target="#modal-search"><span class="sr-only">검색</span></button>
                                     </div>
                                 </div>
                                 <div class="program-list">
                                     <ul>
                                         <li>
                                             <a href="program_detail.html">
-                                                <span class="img"><img src="../../resources/images/@thumb-program.png" alt="트레저헌터"></span>
+                                                <span class="img"><img src="../../resources/images/thumb_default.png" alt="트레저헌터"></span>
                                                 <span class="category">리얼리티</span>
                                                 <span class="subject"><i class="icon-new">N</i> 트레저헌터</span>
                                                 <span class="date text-truncate">매주 (수) 저녁 7시 50분 방송</span>
