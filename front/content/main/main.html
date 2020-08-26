@@ -407,9 +407,11 @@
             if($(this).attr('class') == 'sl-pause'){
                 $(this).find('i').attr('class',$(this).find('i').attr('class').replace('pause','play'));
                 $(this).attr('class','sl-play');
+                swiperMainPc.autoplay.stop();
             }else{
                 $(this).find('i').attr('class',$(this).find('i').attr('class').replace('play','pause'));
                 $(this).attr('class','sl-pause');
+                swiperMainPc.autoplay.start();
             }
         });
         $(document).on('click','#visual-mobile .swiper-pagination a',function(){
