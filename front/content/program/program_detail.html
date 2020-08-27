@@ -72,15 +72,7 @@
                         <div class="swiper-wrapper">
                             <!-- po용 -->
                             <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
-                            <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
-                            <div class="swiper-slide d-none d-lg-block" style="background-image: url(../../resources/images/img-program-visual.png);"></div>
                             <!-- mobile용 -->
-                            <div class="swiper-slide d-lg-none">
-                                <img src="../../resources/images/img-program-visual-m.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide d-lg-none">
-                                <img src="../../resources/images/img-program-visual-m.jpg" alt="">
-                            </div>
                             <div class="swiper-slide d-lg-none">
                                 <img src="../../resources/images/img-program-visual-m.jpg" alt="">
                             </div>
@@ -128,20 +120,10 @@
                                         <div class="row">
                                             <div class="col-12 col-lg">
                                                 <dl>
-                                                    <dt>편성</dt>
-                                                    <dd>매주 (일) 밤 10:30 방송</dd>
                                                     <dt>장르</dt>
                                                     <dd>서바이벌</dd>
-                                                    <dt>관련등급</dt>
-                                                    <dd>15세 관람가</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="col-12 col-lg">
-                                                <dl>
-                                                    <dt>연출</dt>
+                                                    <dt>기획/연출</dt>
                                                     <dd>방글이, 구민정, 권재오, 박지은 외</dd>
-                                                    <dt>작가</dt>
-                                                    <dd>노진영, 이지혜, 이고운, 박은주 외</dd>
                                                     <dt>출연</dt>
                                                     <dd>연정훈, 김종민, 문세윤, 김선호, 딘딘, 라비</dd>
                                                 </dl>
@@ -212,7 +194,9 @@
     </div>
 
     <script>
-        var swiperMain = new Swiper('.visual .swiper-container', {
+        //pc+mobile 2개가 한쌍이니까 2 이상으로 세팅함.
+        if($('.visual-program .swiper-slide').length > 2){
+            var swiperMain = new Swiper('.visual .swiper-container', {
             spped: 7000,
             pagination: {
                 el: '.swiper-pagination',
@@ -223,6 +207,8 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+        }
+
 
         $(document).ready(function(){
             $('.program-detail .share').on('mouseenter',function(){
