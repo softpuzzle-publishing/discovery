@@ -116,15 +116,12 @@
                                             <!-- mobile용 -->
                                             <div class="d-lg-none">
                                                 <div class="select-mobile">
-                                                    <select name="" id="select-mobile" class="form-control d-inline-block w-auto" title="장르 선택">
-                                                        <option>전체</option>
-                                                        <option>오리지널</option>
-                                                        <option>서바이벌</option>
-                                                        <option>푸드/여행</option>
-                                                        <option>라이프/미스테리/교양</option>
-                                                        <option>국내</option>
-                                                        <option>해외</option>
-                                                        <option>방송예정</option>
+                                                    <select name="t" id="select-mobile" class="form-control d-inline-block w-auto" title="장르 선택" onchange="viewTab(this.value, '');">
+                                                        <option value="" selected="">전체</option>
+                                                        <option value="PRGCODE01">오리지널</option>
+                                                        <option value="PRGCODE02">서바이벌</option>
+                                                        <option value="PRGCODE03">푸드/여행</option>
+                                                        <option value="PRGCODE04">라이프/미스테리/교양</option>
                                                     </select>
                                                     <label for="select-mobile" class="select-value">전체</label>
                                                 </div>
