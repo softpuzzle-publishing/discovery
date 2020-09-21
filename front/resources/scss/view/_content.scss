@@ -535,3 +535,24 @@
         .video{margin-bottom: 25px;}
     }
 }
+
+.terms{
+    color: $dark;word-break: keep-all;
+    strong{font-size: 17px;display: block;margin: 50px 0 10px;}
+    .table-terms{
+        th,
+        td{border: 1px solid #ddd;padding: 15px;}
+        thead{
+            th{background: #eee;color: $dark;font-weight: 400;}
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .terms{
+        strong{font-size: 14px;display: block;margin: 40px 0 5px;}
+        .table-terms{
+            th,
+            td{font-size: 13px;padding: 10px;}
+        }
+    }
+}
