@@ -76,6 +76,13 @@
                     <!-- pc용 -->
                     <div class="swiper-container d-none d-md-block" id="visual-pc">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="video-frame">
+                                        <div id="player1"></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner2.jpg);">
                                 <a href="../program/program_detail.html">
                                     <div class="container">
@@ -86,13 +93,6 @@
                             <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner1.jpg);">
                                 <a href="../program/program_detail.html"><span class="sr-only">건반 위의 하이에나</span></a>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="container">
-                                    <div class="video-frame">
-                                        <div id="player1"></div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-prev swiper-button-prev-pc"></div>
@@ -102,6 +102,11 @@
                     <!-- mobile용 -->
                     <div class="swiper-container d-md-none" id="visual-mobile">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="video-frame">
+                                    <div id="player2"></div>
+                                </div>
+                            </div>
                             <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner2-mobile.jpg);">
                                 <a href="../program/program_detail.html">
                                     <div class="container">
@@ -112,11 +117,7 @@
                             <div class="swiper-slide" style="background-image: url(../../resources/images/main-banner1-mobile.jpg);">
                                 <a href="../program/program_detail.html"><span class="sr-only">건반 위의 하이에나</span></a>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="video-frame">
-                                    <div id="player2"></div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-prev swiper-button-prev-mobile"></div>
@@ -417,7 +418,17 @@
                 slideChangeTransitionStart: function () {
                     playerPc.pauseVideo();
                 },
+                click: function() {
+                    swiperMainPc.autoplay.stop();
+                    console.log(1);
+                }
             }
+        });
+        var myIframe = $('.video-frame iframe').contents().get(0);
+        $(myIframe).on('click',function(){
+            console.log(22);
+            swiperMainPc.autoplay.stop();
+            swiperMainMobile.autoplay.stop();
         });
         var swiperMainMobile = new Swiper('#visual-mobile', {
             effect: 'fade',
@@ -436,6 +447,9 @@
             on: {
                 slideChangeTransitionStart: function () {
                     playerMobile.pauseVideo();
+                },
+                click: function() {
+                    swiperMainMobile.autoplay.stop();
                 }
             }
         });
@@ -542,10 +556,10 @@
 
         function onPlayerStateChange(event) {
             console.log('onPlayerStateChange')
-            if (event.data == YT.PlayerState.PLAYING) {
+            //if (event.data == YT.PlayerState.PLAYING ) {
                 swiperMainPc.autoplay.stop();
                 swiperMainMobile.autoplay.stop();
-            }
+            //}
         }
 
     </script>

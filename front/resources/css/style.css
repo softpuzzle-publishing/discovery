@@ -11363,16 +11363,18 @@ a.text-black:hover, a.text-black:focus {
 .visual .swiper-button-next,
 .visual .swiper-button-prev {
   transform: translate(-10000px, -10000px);
-  width: 60px;
-  height: 95px;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  margin-top: 0;
 }
 
 .visual .swiper-button-prev, .visual .swiper-container-rtl .swiper-button-next {
-  left: 30px;
+  left: 0;
 }
 
 .visual .swiper-button-next, .visual .swiper-container-rtl .swiper-button-prev {
-  right: 30px;
+  right: 0;
 }
 
 .visual .swiper-button-next:after, .visual .swiper-button-prev:after {
@@ -11392,6 +11394,10 @@ a.text-black:hover, a.text-black:focus {
 
 .visual .swiper-button-next:after, .visual .swiper-container-rtl .swiper-button-prev:after {
   background-image: url("../images/arr.svg");
+}
+
+.visual .swiper-button-next.swiper-button-disabled, .visual .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }
 
 .visual .sl-pause {
