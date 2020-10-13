@@ -417,18 +417,8 @@
             on: {
                 slideChangeTransitionStart: function () {
                     playerPc.pauseVideo();
-                },
-                click: function() {
-                    swiperMainPc.autoplay.stop();
-                    console.log(1);
                 }
             }
-        });
-        var myIframe = $('.video-frame iframe').contents().get(0);
-        $(myIframe).on('click',function(){
-            console.log(22);
-            swiperMainPc.autoplay.stop();
-            swiperMainMobile.autoplay.stop();
         });
         var swiperMainMobile = new Swiper('#visual-mobile', {
             effect: 'fade',
@@ -447,9 +437,6 @@
             on: {
                 slideChangeTransitionStart: function () {
                     playerMobile.pauseVideo();
-                },
-                click: function() {
-                    swiperMainMobile.autoplay.stop();
                 }
             }
         });
